@@ -1,24 +1,22 @@
-library-template
+provider-library
 ================
 
-[![Build Status](https://img.shields.io/github/workflow/status/webeweb/library-template/build?style=flat-square)](https://github.com/webeweb/library-template/actions)
-[![Coverage Status](https://img.shields.io/coveralls/github/webeweb/library-template/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/library-template?branch=master)
-[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/library-template/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/library-template/?branch=master)
-[![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/library-template.svg?style=flat-square)](https://packagist.org/packages/webeweb/library-template)
-[![Latest Unstable Version](https://img.shields.io/packagist/vpre/webeweb/library-template.svg?style=flat-square)](https://packagist.org/packages/webeweb/library-template)
-[![License](https://img.shields.io/packagist/l/webeweb/library-template.svg?style=flat-square)](https://packagist.org/packages/webeweb/library-template)
-[![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/library-template)
+[![Build Status](https://img.shields.io/github/workflow/status/webeweb/provider-library/build?style=flat-square)](https://github.com/webeweb/provider-library/actions)
+[![Coverage Status](https://img.shields.io/coveralls/github/webeweb/provider-library/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/provider-library?branch=master)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/provider-library/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/provider-library/?branch=master)
+[![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/provider-library.svg?style=flat-square)](https://packagist.org/packages/webeweb/provider-library)
+[![Latest Unstable Version](https://img.shields.io/packagist/vpre/webeweb/provider-library.svg?style=flat-square)](https://packagist.org/packages/webeweb/provider-library)
+[![License](https://img.shields.io/packagist/l/webeweb/provider-library.svg?style=flat-square)](https://packagist.org/packages/webeweb/provider-library)
+[![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/provider-library)
 
-> IMPORTANT NOTICE: This package is still under development. Any changes will be
-> done without prior notice to consumers of this package. Of course this code
-> will become stable at a certain point, but for now, use at your own risk.
+Provider library
 
 If you like this package, pay me a beer (or a coffee)
 [![paypal.me](https://img.shields.io/badge/paypal.me-webeweb-0070ba.svg?style=flat-square&logo=paypal)](https://www.paypal.me/webeweb)
 
 ## Compatibility
 
-[![PHP](https://img.shields.io/packagist/php-v/webeweb/library-template.svg?style=flat-square)](http://php.net)
+[![PHP](https://img.shields.io/packagist/php-v/webeweb/provider-library.svg?style=flat-square)](http://php.net)
 
 ## Installation
 
@@ -26,7 +24,7 @@ Open a command console, enter your project directory and execute the following
 command to download the latest stable version of this package:
 
 ```bash
-$ composer require webeweb/library-template
+$ composer require webeweb/provider-library
 ```
 
 This command requires you to have Composer installed globally, as explained in
@@ -44,8 +42,8 @@ Open a command console and execute the following commands to download the latest
 stable version of this package:
 
 ```bash
-$ git clone https://github.com/webeweb/library-template.git
-$ cd library-template
+$ git clone https://github.com/webeweb/provider-library.git
+$ cd provider-library
 $ composer install
 ```
 
@@ -57,7 +55,7 @@ $ vendor/bin/phpunit
 
 ## License
 
-`library-template` is released under the MIT License. See the bundled [LICENSE](LICENSE)
+`provider-library` is released under the MIT License. See the bundled [LICENSE](LICENSE)
 file for details.
 
 ## Donate
