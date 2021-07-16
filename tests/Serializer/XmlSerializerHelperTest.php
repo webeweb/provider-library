@@ -60,6 +60,6 @@ class XmlSerializerHelperTest extends AbstractTestCase {
         ];
 
         $res = XmlSerializerHelper::serializeArray($models);
-        $this->assertEquals("\n", $res);
+        $this->assertEquals("", $res);
     }
 }

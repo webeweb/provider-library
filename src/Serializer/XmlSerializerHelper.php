@@ -69,7 +69,7 @@ class XmlSerializerHelper extends SerializerHelper {
             $output[] = $result;
         }
 
-        return implode("\n", $output);
+        return implode("", $output);
     }
 
     /**
