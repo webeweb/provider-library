@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.0.2](https://github.com/webeweb/provider-library/tree/v1.0.2) (2021-07-16)
+
+- Move log() method
+
 ### [1.0.1](https://github.com/webeweb/provider-library/tree/v1.0.1) (2021-07-16)
 
 - Remove new line into XML serializer
