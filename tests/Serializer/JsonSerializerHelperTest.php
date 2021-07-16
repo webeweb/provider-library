@@ -36,7 +36,7 @@ class JsonSerializerHelperTest extends AbstractTestCase {
             null,
         ];
 
-        $res = JsonSerializerHelper::serializeArray($models);
+        $res = JsonSerializerHelper::jsonSerializeArray($models);
         $this->assertEquals([[], [], []], $res);
     }
 }

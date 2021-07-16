@@ -36,7 +36,7 @@ class CsvSerializerHelperTest extends AbstractTestCase {
             null,
         ];
 
-        $res = CsvSerializerHelper::serializeArray($models);
+        $res = CsvSerializerHelper::csvSerializeArray($models);
         $this->assertEquals("\n", $res);
     }
 }

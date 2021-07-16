@@ -27,13 +27,13 @@ class XmlSerializerHelper extends SerializerHelper {
      * @param XmlSerializable[] $models The models.
      * @return string Returns the serialized array.
      */
-    public static function serializeArray(array $models): string {
+    public static function xmlSerializeArray(array $models): string {
 
         $output = [];
 
         foreach ($models as $current) {
 
-            $result = static::serializeModel($current);
+            $result = static::xmlSerializeModel($current);
             if (null === $result) {
                 continue;
             }
@@ -50,7 +50,7 @@ class XmlSerializerHelper extends SerializerHelper {
      * @param XmlSerializable|null $model The model.
      * @return string|null Returns the serialized model.
      */
-    public static function serializeModel(?XmlSerializable $model): ?string {
+    public static function xmlSerializeModel(?XmlSerializable $model): ?string {
 
         if (null === $model) {
             return null;
@@ -65,7 +65,7 @@ class XmlSerializerHelper extends SerializerHelper {
      * @param string|null $value The value.
      * @return string|null Returns the serialized value.
      */
-    public static function serializeValue(?string $value): ?string {
+    public static function xmlSerializeValue(?string $value): ?string {
 
         if (null === $value) {
             return null;

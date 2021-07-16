@@ -27,12 +27,12 @@ class JsonSerializerHelper {
      * @param JsonSerializable[] $models The models.
      * @return array Returns the serialized array.
      */
-    public static function serializeArray(array $models): array {
+    public static function jsonSerializeArray(array $models): array {
 
         $output = [];
 
         foreach ($models as $current) {
-            $output[] = static::serializeModel($current);
+            $output[] = static::jsonSerializeModel($current);
         }
 
         return $output;
@@ -44,7 +44,7 @@ class JsonSerializerHelper {
      * @param JsonSerializable|null $model The model.
      * @return array Returns the serialized model.
      */
-    public static function serializeModel(?JsonSerializable $model): array {
+    public static function jsonSerializeModel(?JsonSerializable $model): array {
 
         if (null === $model) {
             return [];
