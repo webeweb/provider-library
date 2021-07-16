@@ -13,7 +13,6 @@ namespace WBW\Library\Provider\Tests\Serializer;
 
 use WBW\Library\Provider\Serializer\XmlDeserializerHelper;
 use WBW\Library\Provider\Tests\AbstractTestCase;
-use WBW\Library\Provider\Tests\Fixtures\Serializer\TestSerializerHelper;
 
 /**
  * XML deserializer helper test.
@@ -74,7 +73,7 @@ class XmlDeserializerHelperTest extends AbstractTestCase {
      */
     public function testLog(): void {
 
-        TestSerializerHelper::setLogger($this->logger);
+        XmlDeserializerHelper::setLogger($this->logger);
         $this->assertNull(XmlDeserializerHelper::log($this->document->documentElement));
     }
 
@@ -85,7 +84,7 @@ class XmlDeserializerHelperTest extends AbstractTestCase {
      */
     public function testLogWithoutLogger(): void {
 
-        TestSerializerHelper::setLogger(null);
+        XmlDeserializerHelper::setLogger(null);
         $this->assertNull(XmlDeserializerHelper::log($this->document->documentElement));
     }
 }

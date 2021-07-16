@@ -24,11 +24,11 @@ use WBW\Library\Provider\Tests\Fixtures\Model\TestCsvSerializable;
 class CsvSerializerHelperTest extends AbstractTestCase {
 
     /**
-     * Tests the serialize() method.
+     * Tests the serializeArray() method.
      *
      * @return void
      */
-    public function testSerialize(): void {
+    public function testSerializeArray(): void {
 
         $models = [
             new TestCsvSerializable(),
