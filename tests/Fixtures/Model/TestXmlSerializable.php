@@ -11,7 +11,6 @@
 
 namespace WBW\Library\Provider\Tests\Fixtures\Model;
 
-use TheSeer\Tokenizer\XMLSerializer;
 use WBW\Library\Provider\Model\XmlSerializable;
 
 /**

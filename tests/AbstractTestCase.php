@@ -46,7 +46,7 @@ abstract class AbstractTestCase extends TestCase {
 
         // Set a DOM document mock.
         $this->document = new DOMDocument();
-        $this->document->load(realpath(__DIR__."/Serializer/XmlSerializerHelperTest.xml"));
+        $this->document->load(realpath(__DIR__ . "/Serializer/XmlSerializerHelperTest.xml"));
 
         // Set a Logger mock.
         $this->logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
