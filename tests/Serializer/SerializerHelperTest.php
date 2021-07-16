@@ -12,8 +12,8 @@
 namespace WBW\Library\Provider\Tests\Serializer;
 
 use Psr\Log\LoggerInterface;
+use WBW\Library\Provider\Serializer\SerializerHelper;
 use WBW\Library\Provider\Tests\AbstractTestCase;
-use WBW\Library\Provider\Tests\Fixtures\Serializer\TestSerializerHelper;
 
 /**
  * Serializer helper test.
@@ -33,7 +33,7 @@ class SerializerHelperTest extends AbstractTestCase {
         // Set a Logger mock.
         $logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
 
-        TestSerializerHelper::setLogger($logger);
-        $this->assertSame($logger, TestSerializerHelper::getLogger());
+        SerializerHelper::setLogger($logger);
+        $this->assertSame($logger, SerializerHelper::getLogger());
     }
 }

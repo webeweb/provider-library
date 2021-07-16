@@ -37,4 +37,14 @@ abstract class SerializerHelper {
     public static function getLogger(): ?LoggerInterface {
         return static::$logger;
     }
+
+    /**
+     * Set the logger.
+     *
+     * @param LoggerInterface|null $logger The logger.
+     * @return void
+     */
+    public static function setLogger(?LoggerInterface $logger): void {
+        static::$logger = $logger;
+    }
 }
