@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.2.0](https://github.com/webeweb/provider-library/tree/v1.2.0) (2021-07-16)
+
+- Rename some methods due to a name collision into libraries consumers
+
 ### [1.1.0](https://github.com/webeweb/provider-library/tree/v1.1.0) (2021-07-16)
 
 - Add JSON serializer helper
