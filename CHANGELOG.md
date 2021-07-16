@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.1.0](https://github.com/webeweb/provider-library/tree/v1.1.0) (2021-07-16)
+
+- Add JSON serializer helper
+
 ### [1.0.2](https://github.com/webeweb/provider-library/tree/v1.0.2) (2021-07-16)
 
 - Move log() method
