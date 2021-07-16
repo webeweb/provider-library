@@ -58,4 +58,19 @@ class XmlSerializerHelper extends SerializerHelper {
 
         return $model->xmlSerialize();
     }
+
+    /**
+     * Serializes a value.
+     *
+     * @param string|null $value The value.
+     * @return string|null Returns the serialized value.
+     */
+    public static function serializeValue(?string $value): ?string {
+
+        if (null === $value) {
+            return null;
+        }
+
+        return htmlentities($value, ENT_XML1 | ENT_QUOTES, "UTF-8");
+    }
 }

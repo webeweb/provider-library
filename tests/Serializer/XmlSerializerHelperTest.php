@@ -24,11 +24,11 @@ use WBW\Library\Provider\Tests\Fixtures\Model\TestXmlSerializable;
 class XmlSerializerHelperTest extends AbstractTestCase {
 
     /**
-     * Tests the serialize() method.
+     * Tests the serializeArray() method.
      *
      * @return void
      */
-    public function testSerialize(): void {
+    public function testSerializeArray(): void {
 
         $models = [
             new TestXmlSerializable(),
@@ -38,5 +38,18 @@ class XmlSerializerHelperTest extends AbstractTestCase {
 
         $res = XmlSerializerHelper::serializeArray($models);
         $this->assertEquals("", $res);
+    }
+
+    /**
+     * Tests the serializeValue() method.
+     *
+     * @return void
+     */
+    public function testSerializeValue(): void {
+
+        $this->assertNull(XmlSerializerHelper::serializeValue(null));
+
+        $res = XmlSerializerHelper::serializeValue('<?xml version="1.0" encoding="utf-8"?>');
+        $this->assertEquals("&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;", $res);
     }
 }
