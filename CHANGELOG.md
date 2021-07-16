@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.3.0](https://github.com/webeweb/provider-library/tree/v1.3.0) (2021-07-16)
+
+- Add abstract Response
+
 ### [1.2.0](https://github.com/webeweb/provider-library/tree/v1.2.0) (2021-07-16)
 
 - Rename some methods due to a name collision into libraries consumers
