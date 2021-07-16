@@ -101,4 +101,31 @@ class XmlDeserializerHelper extends SerializerHelper {
 
         return $domNodes;
     }
+
+    /**
+     * Log.
+     *
+     * @param DOMNode $domNode The DOM node.
+     * @return void
+     */
+    public static function log(DOMNode $domNode): void {
+
+        if (null === static::getLogger()) {
+            return;
+        }
+
+        $context = [];
+
+        /** @var DOMNode $current */
+        foreach ($domNode->attributes as $current) {
+            $context["_attributes"][] = [$current->nodeName => $current->nodeValue];
+        }
+
+        /** @var DOMNode $current */
+        foreach ($domNode->childNodes as $current) {
+            $context["_chilNodes"][] = $current->nodeName;
+        }
+
+        static::$logger->debug(sprintf('Deserialize a DOM node with name "%s"', $domNode->nodeName), $context);
+    }
 }

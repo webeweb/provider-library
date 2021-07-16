@@ -13,6 +13,7 @@ namespace WBW\Library\Provider\Tests\Serializer;
 
 use WBW\Library\Provider\Serializer\XmlDeserializerHelper;
 use WBW\Library\Provider\Tests\AbstractTestCase;
+use WBW\Library\Provider\Tests\Fixtures\Serializer\TestSerializerHelper;
 
 /**
  * XML deserializer helper test.
@@ -64,5 +65,27 @@ class XmlDeserializerHelperTest extends AbstractTestCase {
 
         $this->assertCount(2, XmlDeserializerHelper::getDomNodesByName("child", $this->document->documentElement->childNodes));
         $this->assertCount(0, XmlDeserializerHelper::getDomNodesByName("child"));
+    }
+
+    /**
+     * Tests the log() method.
+     *
+     * @return void
+     */
+    public function testLog(): void {
+
+        TestSerializerHelper::setLogger($this->logger);
+        $this->assertNull(XmlDeserializerHelper::log($this->document->documentElement));
+    }
+
+    /**
+     * Tests the log() method.
+     *
+     * @return void
+     */
+    public function testLogWithoutLogger(): void {
+
+        TestSerializerHelper::setLogger(null);
+        $this->assertNull(XmlDeserializerHelper::log($this->document->documentElement));
     }
 }
