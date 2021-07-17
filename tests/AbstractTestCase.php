@@ -11,7 +11,6 @@
 
 namespace WBW\Library\Provider\Tests;
 
-use DOMDocument;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 
@@ -25,13 +24,6 @@ use Psr\Log\LoggerInterface;
 abstract class AbstractTestCase extends TestCase {
 
     /**
-     * DOM document.
-     *
-     * @var DOMDocument
-     */
-    protected $document;
-
-    /**
      * Logger.
      *
      * @var LoggerInterface
@@ -43,10 +35,6 @@ abstract class AbstractTestCase extends TestCase {
      */
     protected function setUp(): void {
         parent::setUp();
-
-        // Set a DOM document mock.
-        $this->document = new DOMDocument();
-        $this->document->load(realpath(__DIR__ . "/Serializer/XmlSerializerHelperTest.xml"));
 
         // Set a Logger mock.
         $this->logger = $this->getMockBuilder(LoggerInterface::class)->getMock();

@@ -27,7 +27,7 @@ class XmlDeserializerHelper extends SerializerHelper {
      *
      * @param DOMNode $domNode The DOM node.
      * @param string $nodeName The node name.
-     * @return string|null Returns the attribute value in case of success, null otherwise.
+     * @return string|null Returns the text content in case of success, null otherwise.
      */
     public static function getChildDomNodeTextContent(DOMNode $domNode, string $nodeName): ?string {
 
@@ -127,5 +127,30 @@ class XmlDeserializerHelper extends SerializerHelper {
         }
 
         static::$logger->debug(sprintf('Deserialize a DOM node with name "%s"', $domNode->nodeName), $context);
+    }
+
+    /**
+     * Convert XML entities.
+     *
+     * @param string $filename The filename.
+     * @param string $encoding The encoding.
+     * @return string Returns the converted XML entities.
+     */
+    public static function xmlEntities(string $filename, string $encoding = "utf-8"): string {
+
+        $pattern  = "/(<[A-Za-z_]*>)(.*)(<\/[A-Za-z_]*>)/";
+        $content  = file_get_contents($filename);
+        $callback = function($matches) use ($encoding) {
+
+            $output = [
+                $matches[1],
+                htmlentities($matches[2], ENT_XML1 | ENT_QUOTES, $encoding),
+                $matches[3],
+            ];
+
+            return implode("", $output);
+        };
+
+        return preg_replace_callback($pattern, $callback, $content);
     }
 }

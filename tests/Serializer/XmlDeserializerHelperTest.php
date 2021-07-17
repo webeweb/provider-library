@@ -11,6 +11,7 @@
 
 namespace WBW\Library\Provider\Tests\Serializer;
 
+use DOMDocument;
 use WBW\Library\Provider\Serializer\XmlDeserializerHelper;
 use WBW\Library\Provider\Tests\AbstractTestCase;
 
@@ -23,13 +24,43 @@ use WBW\Library\Provider\Tests\AbstractTestCase;
 class XmlDeserializerHelperTest extends AbstractTestCase {
 
     /**
+     * DOM document.
+     *
+     * @var DOMDocument
+     */
+    private $document;
+
+    /**
+     * Filename.
+     *
+     * @var string
+     */
+    private $filename;
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function setUp(): void {
+        parent::setUp();
+
+        // Set a filename mock.
+        $this->filename = realpath(__DIR__ . "/../Serializer/XmlSerializerHelperTest.xml");
+
+        $content = XmlDeserializerHelper::xmlEntities($this->filename);
+
+        // Set a DOM document mock.
+        $this->document = new DOMDocument();
+        $this->document->loadXml($content);
+    }
+
+    /**
      * Tests the getChildDomNodeAttribute() method.
      *
      * @return void
      */
     public function testGetChildDomNodeTextContent(): void {
 
-        $this->assertEquals("text content", XmlDeserializerHelper::getChildDomNodeTextContent($this->document->documentElement, "children"));
+        $this->assertEquals("text & content", XmlDeserializerHelper::getChildDomNodeTextContent($this->document->documentElement, "children"));
         $this->assertNull(XmlDeserializerHelper::getChildDomNodeTextContent($this->document->documentElement, "child"));
     }
 
