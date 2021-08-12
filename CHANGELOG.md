@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.5.0](https://github.com/webeweb/provider-library/tree/v1.5.0) (2021-08-12)
+
+- Update dependencies
+
 ### [1.4.0](https://github.com/webeweb/provider-library/tree/v1.4.0) (2021-07-18)
 
 - Update XML deserializer
